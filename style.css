@@ -2,5 +2,45 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+}
+body {
+    background: #A26FE3;
+}
+.container{
+    height: 80vh;
+    width: 80vw;
+    margin: auto;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+    padding: 2rem;
+    display: flex;
+    background: #FBB400;
+    font-size: 1.5rem;
+    border-radius: 15px;
+}
+.heading h1{
+    align-content: center;
+}
+.btn{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 5px 5px 0px 0px black;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(0.9); /* Slightly enlarge the button */
 }
