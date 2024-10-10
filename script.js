@@ -27,18 +27,35 @@ function addTodo() {
       alert("You Must Write Something!!");
     } else {
       let li = document.createElement("li");
-      li.innerHTML = `${taskInput.value} - ${timeInput.value}seconds`;
+      li.innerHTML = `${taskInput.value} - ${timeInput.value} seconds`;
       listContainer.appendChild(li);
+      let span=document.createElement("span")
+      span.innerHTML ="\u00d7"
+      li.appendChild(span)
   
-      saveTask(taskInput.value,timeInput.value)
+      saveData()
 
       taskInput.value = "";
       timeInput.value = "";
     }
   }
+   
+  listContainer.addEventListener('click',(evt)=>{
+      if(evt.target.tagName==='LI'){
+        evt.target.classList.toggle("checked");
+        saveData()
+      }
+      else if(evt.target.tagName==="SPAN"){
+        evt.target.parentElement.remove();
+        saveData()
+      }
+  },false)
 
-  function saveTask(task,time){
-    let tasks = JSON.parse(localStorage.getItems('tasks')) || []
-    tasks.push({task,time})
-    localStorage.setItem("tasks",JSON.stringify(tasks))
-  }
+
+function saveData(){
+  localStorage.setItem("data",listContainer.innerHTML)
+}
+function showTask(){
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask()
