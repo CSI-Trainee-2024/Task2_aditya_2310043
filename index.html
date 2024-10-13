@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Begin Workout</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -14,24 +15,26 @@
         <div class="main">
             <div class="heading">
                 <h1>Track your Reps & Time Efficiency</h1>
-                <button class="btn" onclick="addTodo()">Begin Workout</button>
+                <button class="btn">Begin Workout</button>
+                <button><a href="./progress.html" style="text-decoration: none; color: #000;">View Progress</a></button>
             </div>
             <div class="container1">
-               <!-- <div class="todo-app">
-                <h2>To-Do List <img src="./images/icon.png"></h2> 
-                <div class="row">
-                    <input type="text" id="task-input" placeholder="Add Your Task" required>
-                    <input type="number" id="time-input" placeholder="Add Your Time" required>
-                     <button onclick="addTask()">Add</button> 
-                </div>-->
+                <div class="todo-app">
+                    <h2>To-Do List <img src="./images/icon.png"></h2>
+                    <div class="row">
+                        <input type="text" id="task-input" placeholder="Add Your Task" required>
+                        <input type="number" id="time-input" placeholder="Add Your Time" required>
+                        <button onclick="addTask()">Add</button>
+                    </div>
+                    <!-- <ul id="list-container">
+
+                    </ul> -->
+                </div>
                 <ul id="list-container">
-                    <!-- <li class="checked">Task 1</li>
-                    <li>Task 2</li>
-                    <li>Task 3</li> -->
+
                 </ul>
-               </div>
             </div>
-        </div>  
+        </div>
 
     </div>
 </body>

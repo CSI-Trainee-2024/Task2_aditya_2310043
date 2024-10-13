@@ -57,12 +57,13 @@ body {
     min-height: 50vh;
     background: linear-gradient(135deg,#153667,#4e085f);
     padding: 10px;
+    display: none;
 }
 .todo-app{
     width: 100%;
     max-width: 540px;
     background: #fff;
-    margin: 100px auto 20px;
+    margin: 20px auto 10px;
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
@@ -89,7 +90,7 @@ body {
     margin-bottom: 25px;
     gap: 5px;
 }
-.row input{
+input{
     flex: 1;
     border: none;
     background: transparent;
@@ -109,6 +110,8 @@ button{
     border-radius:40px ;
 }
 ul li{
+    height:3.0rem;
+   background:#edeef0 ;
    list-style: none;
    font-size: 17px;
    padding: 12px 8px 12px 50px;
@@ -148,7 +151,35 @@ ul li span {
     text-align: center;
     border-radius: 50%;
 }
-
-ul li span:hover{
-    background: #edeef0;
+ul li .start-btn{
+    position: absolute;
+    right: 150px;
+    top: 5px;
+    height: 40px;
+    font-size: 0.9rem;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    align-content: center;
+    transition:  transform 0.2s;
+}
+ul li .cross-btn{
+    position: absolute;
+    right: 50px;
+    font-size: 2rem;
+}
+ul li .start-btn:hover{
+    background: #45a049;
+    transform: scale(0.9);
+}
+ul li .skip-btn{
+    position: absolute;
+    left:10rem;
+    top: 5px;
+    height: 40px;
+    font-size: 0.9rem;
+    transition:  transform 0.2s;
+}
+ul li .skip-btn:hover{
+    background: #45a049;
+    transform: scale(0.9);
 }
